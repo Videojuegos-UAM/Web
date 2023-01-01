@@ -1,0 +1,13 @@
+Bueno, esto es el esqueleto de las web para la asociación de videojuegos UAM. Espero que os guste y que os sirva de ayuda. Si tenéis alguna duda, podéis contactar con Manuel o conmigo (Enrique).
+
+(Por cierto, protip para windows, en una consola de powershell:
+
+    > Set-ExecutionPolicy Unrestricted -Scope Process 
+    > python3 -m venv venv
+    > .\venv\Scripts\activate
+    > pip install Flask
+    > python -m app
+    
+    En orden, permitir ejecución de scripts, crear el entorno virtual, activarlo, instalar flask y ejecutar la app.
+    Listo uwu.
+)
