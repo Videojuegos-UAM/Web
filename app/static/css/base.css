@@ -1,7 +1,47 @@
-#ola{
-    float: right;
-    width: 25%;
-    height: auto;
-    position: sticky;
-    top: 2%;
+/*Variables*/
+:root {
+    --main-bg-color: rgb(255, 255, 255);
+    --main-text-color: rgb(0, 0, 0);
+    --main-text-color-light: rgb(255, 255, 255);
+    --main-header-color: rgb(72, 155, 76);
+    --main-header-text-color: rgb(0, 0, 0);
+}
+
+/*Global*/
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/*Header*/
+header {
+    background-color: var(--main-header-color);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--main-header-text-color);
+    text-align: center;
+    font-family: fantasy;
+    font-size: 2em;
+}
+
+#header-logo {
+    margin: auto;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    margin: auto;
+}
+
+#header-title {
+    margin: auto;
+    padding: 0;
+    margin: auto;
 }
