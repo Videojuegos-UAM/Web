@@ -13,7 +13,7 @@
        body {background-image: url({{ url_for('static', filename='img/Background.png' ) }});}
     </style>
         <header>
-            <a id="header-link" href="https://www.google.com">
+            <a id="header-link" href={{ url_for('base') }}>
                 <img id="header-logo" src={{ url_for('static', filename='img/Logo.png' ) }} alt="No Logo?">
                 <h1 id="header-title">
                     Asociación Videojuegos UAM
@@ -25,6 +25,7 @@
                     <a>Blog</a>
                     <a>Academy</a>
                     <a>YouTube</a>
+                    <a href={{ url_for('calendar') }}>Calendario</a>
                 </div>
               </div>
         </header>
