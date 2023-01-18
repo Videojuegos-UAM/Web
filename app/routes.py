@@ -10,6 +10,6 @@ from flask import render_template, request, url_for, redirect, session, make_res
 def base():
     return render_template('base.html')
 
-@app.route('/calendar')
-def calendar():
-    return render_template('calendar.html')
+@app.route('/form')
+def form():
+    return render_template('form.html')

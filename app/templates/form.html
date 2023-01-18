@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="formulario">
+    <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdChvsrhZOt4oz6NhPYrDkZ81ekBbQTJsASiGKoJcr1omGN3A/viewform?embedded=true"
+        width="700" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+</div>
+ <!-- Add a placeholder for the Twitch embed -->
+ <div id="twitch-embed"></div>
+
+ <!-- Load the Twitch embed JavaScript file -->
+ <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+ <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+ <script type="text/javascript">
+   new Twitch.Embed("twitch-embed", {
+     width: 800,
+     height: 500,
+     channel: "LVPes"
+   });
+ </script>
+{% endblock %}
