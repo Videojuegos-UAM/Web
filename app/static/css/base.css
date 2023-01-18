@@ -136,10 +136,6 @@ header {
     height: 4em;
   }
 
-  .calendar {
-    width: 40%;
-    height: 20%;
-    margin: 5% auto;
-    padding: 10px;
-    position: relative;
+  .calendar-static {
+    float: right;
   }
