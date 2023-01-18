@@ -6,9 +6,9 @@ from flask import render_template, request, url_for, redirect, session, make_res
 
 
 @app.route('/')
-@app.route('/base')
+@app.route('/index')
 def base():
-    return render_template('base.html')
+    return render_template('index.html')
 
 @app.route('/calendar')
 def calendar():
