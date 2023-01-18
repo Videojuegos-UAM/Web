@@ -1,8 +1,22 @@
 {%extends "base.html" %} 
 
-{% block aside %}
+{%block header%}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{%endblock%}
 
+{%block content%}
+<div class="twitch-container">
+    <h2>Now on Twitch</h2>
+    <iframe
+        src="https://player.twitch.tv/?channel=asociacionvideojuegosuam&parent=videojuegosuam.com"
+        frameborder="0"
+        allowfullscreen="true"
+        scrolling="no" id="twitch-embed">
+    </iframe>
+</div>
+{%endblock%}
+
+{% block aside %}
 <div class="calendar-static">
     <iframe
         src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23489b4c&ctz=Europe%2FMadrid&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showNav=1&showDate=1&showTitle=0&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688"

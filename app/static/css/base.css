@@ -136,3 +136,37 @@ header {
     height: 4em;
   }
 
+  section{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: top;
+    flex-direction: row;
+    overflow: visible;
+    margin: 1em;
+    padding: 1em;
+  }
+  
+  aside{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    overflow: visible;
+    height: 100%;
+    margin: 1em;
+  }
+
+  /*Titles*/
+
+  h2 {
+    margin: 0;
+    padding-left: 0.5em;
+    color: var(--main-text-color);
+    text-align: center;
+    font-family: var(--main-text-font);
+    font-size: 2.5em;
+    font-style: italic;
+  }
+
