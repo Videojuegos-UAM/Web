@@ -1,12 +1,92 @@
 {%extends "base.html" %} 
 
-{% block aside %}
+{%block head%}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gráfico de barrasL</title>
 
+<style>
+
+</style>
+{%endblock%}
+
+{%block content%}
+<div class="container">
+    <h2>Estamos en Directo!!!!</h2>
+    <iframe
+        src="https://player.twitch.tv/?channel=asociacionvideojuegosuam&parent=videojuegosuam.com"
+        frameborder="0"
+        allowfullscreen="true"
+        scrolling="no" id="twitch-embed">
+    </iframe>
+</div>
+<div class="container"> 
+    
+    <h2>¿Quienes Somos?</h2>
+    <div class="article-and-image">
+        <p>
+            Somos una asociación de estudiantes de la Universidad Autónoma de Madrid, que tiene como objetivo principal la difusión de los videojuegos y la cultura gamer. 
+            Nuestra asociación se fundó en el año 1975, y desde entonces hemos ido creciendo y evolucionando hasta convertirnos en lo que somos hoy en día. 
+            Nuestra asociación está formada por un equipo de trabajo que se encarga de organizar eventos, torneos, charlas, etc. 
+            Además, contamos con un equipo de profesionales que se encarga de la producción de contenido para nuestras redes sociales, como por ejemplo, nuestro canal de YouTube. 
+            Si quieres saber más sobre nosotros, no dudes en visitar nuestra página de "Sobre Nosotros".
+            Texto de prueba para ver como queda el texto en la página principal.
+        </p>
+        <img src={{ url_for('static', filename='img/Logo.png' ) }} alt="Logo Videojuegos UAM" class="normal-img">
+    </div>
+    <button class="button" onclick>
+        <p><b>Apuntate al club</b></p>
+    </button>
+</div>
+{%endblock%}
+
+{% block aside %}
 <div class="calendar-static">
     <iframe
         src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23489b4c&ctz=Europe%2FMadrid&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showNav=1&showDate=1&showTitle=0&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688"
         style="border-width:0" width="400" height="500" frameborder="0" scrolling="no">
     </iframe>
+</div>
+<div class="next-tournament" hidden>
+    <h2>Próximo Torneo</h2>
+    <img src={{ url_for('static', filename='img/Logo.png' ) }} alt="Logo Videojuegos UAM" class="small-img">
+    <p>Nombre del torneo</p>
+    <p>Fecha del torneo</p>
+    <p>Horario del torneo</p>
+    <button class="button" onclick>
+        <p><b>Apuntate al torneo</b></p>
+</div>
+<div class="next-tournament-form" hidden>
+    <h2>Próximo Torneo</h2>
+    <form>
+        <div>
+            <input type="checkbox" name="game" value="1"><p>Valor 1</p></option>
+        </div>
+        <div>
+            <input type="checkbox" name="game" value="2"><p>Valor 2</p></option>
+        </div>
+        <div>
+            <input type="checkbox" name="game" value="3"><p>Valor 3</p></option>
+        </div>
+    </form>
+    <button class="button" onclick>
+        <p><b>Elije juego</b></p>
+</div>
+<div class="resultados-torneo">
+    <div class="chart-wrap horizontal"> <!-- quitar el estilo "horizontal" para visualizar verticalmente -->
+        <h2>Resultados Torneo</h2>
+       
+        <div class="grid">
+            <div class="bar" style="--bar-value:85%;" data-name="Your Blog" title="Your Blog 85%"></div>
+            <div class="bar" style="--bar-value:23%;" data-name="Medium" title="Medium 23%"></div>
+            <div class="bar" style="--bar-value:7%;" data-name="Tumblr" title="Tumblr 7%"></div>
+            <div class="bar" style="--bar-value:38%;" data-name="Facebook" title="Facebook 38%"></div>
+            <div class="bar" style="--bar-value:35%;" data-name="YouTube" title="YouTube 35%"></div>
+            <div class="bar" style="--bar-value:30%;" data-name="LinkedIn" title="LinkedIn 30%"></div>
+            <div class="bar" style="--bar-value:5%;" data-name="Twitter" title="Twitter 5%"></div>
+            <div class="bar" style="--bar-value:20%;" data-name="Other" title="Other 20%"></div>
+        </div>
+      </div>
 </div>
 {%endblock%}
