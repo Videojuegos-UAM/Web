@@ -6,8 +6,12 @@
     --main-text-font: 'Roboto', sans-serif;
     --main-header-color: rgb(72, 155, 76);
     --dark-header-color: rgb(50,100,50);
+    --article-bg-color: rgb(189, 236, 182);
     --main-header-text-color: rgb(0, 0, 0);
     --main-header-text-font:   Orbitron, serif;
+    --main-button-color: rgb(72, 155, 76);
+    --main-button-color-hover: rgb(50,100,50);
+    --main-button-text-color: rgb(0, 0, 0);
 }
 
 /*Global*/
@@ -114,6 +118,8 @@ header {
 
   }
 
+  /*Footer*/
+
   #footer-social {
     display: flex;
     flex-wrap: nowrap;
@@ -136,6 +142,8 @@ header {
     height: 4em;
   }
 
+  /*Navigation*/
+
   section{
     display: flex;
     flex-wrap: nowrap;
@@ -149,6 +157,8 @@ header {
   
   aside{
     display: flex;
+    position: sticky;
+    top: 2em;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
@@ -157,8 +167,40 @@ header {
     height: 100%;
     margin: 1em;
   }
+  article{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    overflow: visible;
+    height: 100%;
+  }
 
-  /*Titles*/
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1em;
+    padding: 1em;
+    width: 140vh;
+    height:70vh;
+  }
+
+  .article-and-image {
+    display: flex;
+    padding: 1em;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    overflow: visible;
+    background-color: var(--article-bg-color);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+
+  /*Text*/
 
   h2 {
     margin: 0;
@@ -169,4 +211,115 @@ header {
     font-size: 2.5em;
     font-style: italic;
   }
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: var(--main-text-color);
+    text-align: left;
+    font-family: var(--main-text-font);
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+ /*Images*/
+
+ .normal-img{
+    width: 30em;
+    height: 30em;
+    margin: 1em;
+    padding: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .small-img{
+    width: 15em;
+    height: 15em;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .big-img{
+    width: 50em;
+    height: 50em;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*Buttons*/
+
+  .button {
+    background-color: var(--main-button-color);
+    border: none;
+    color: var(--main-button-text-color);
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin-top:2em;
+    margin-bottom:1em;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 5em;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+
+  .button:hover {
+    background-color: var(--main-button-color-hover);
+  }
+
+  /*Forms*/
+
+  form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: visible;
+    margin: 0;
+    padding: 1em;
+  }
+  form div{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+
+  form input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: visible;
+    margin: 1em;
+    padding: 1em;
+    width: 2em;
+    height: 2em;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+
+ 
 
