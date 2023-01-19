@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root | tojson }};
+    </script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/Enriqueasteregg.js')}}" ></script>
     <style>
        body {background-image: url({{ url_for('static', filename='img/Background.png' ) }});}
     </style>

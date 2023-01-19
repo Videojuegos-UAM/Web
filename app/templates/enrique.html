@@ -4,14 +4,18 @@
 <head>
     <meta charset="utf-8">
     <title> Se preparooo se puso linda</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base(old).css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/enrique.css') }}">
 </head>
 
 <body>
-
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root | tojson }};
+    </script>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
         <img id="ola" src={{ url_for('static', filename='img/jijijija.jpeg' ) }} alt="jijijija :(">
     </a>
+
+    <button id="adios" onclick="window.location.href = $SCRIPT_ROOT+'/';" ><h1>Fuck Go Back!</h1></button>
 
     <div id="temazo">
         <p>

@@ -13,3 +13,7 @@ def base():
 @app.route('/calendar')
 def calendar():
     return render_template('calendar.html')
+
+@app.route('/Enriqueasteregg')
+def enrique():
+    return render_template('enrique.html')
