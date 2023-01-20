@@ -4,14 +4,10 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gráfico de barrasL</title>
-
-<style>
-
-</style>
 {%endblock%}
 
 {%block content%}
+<script type="text/javascript" src="{{url_for('static', filename='js/snake.js')}}" ></script>
 <div class="container">
     <h2>Estamos en Directo!!!!</h2>
     <iframe
@@ -39,6 +35,11 @@
         <p><b>Apuntate al club</b></p>
     </button>
 </div>
+<div class="container">
+    <h2>Snake Game</h2>
+    <canvas id="snake" width="700" height="700"></canvas>
+    <p id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
+</div>
 {%endblock%}
 
 {% block aside %}
@@ -48,7 +49,7 @@
         style="border-width:0" width="400" height="500" frameborder="0" scrolling="no">
     </iframe>
 </div>
-<div class="next-tournament" hidden>
+<div class="next-tournament" >
     <h2>Próximo Torneo</h2>
     <img src={{ url_for('static', filename='img/Logo.png' ) }} alt="Logo Videojuegos UAM" class="small-img">
     <p>Nombre del torneo</p>
@@ -57,7 +58,7 @@
     <button class="button" onclick>
         <p><b>Apuntate al torneo</b></p>
 </div>
-<div class="next-tournament-form" hidden>
+<div class="next-tournament-form" >
     <h2>Próximo Torneo</h2>
     <form>
         <div>

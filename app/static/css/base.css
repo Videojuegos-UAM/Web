@@ -184,8 +184,7 @@ header {
     align-items: flex-start;
     margin: 1em;
     padding: 1em;
-    width: 140vh;
-    height:70vh;
+    width: 100%;
   }
 
   .article-and-image {
