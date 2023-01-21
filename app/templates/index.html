@@ -8,17 +8,42 @@
 
 {%block content%}
 <script type="text/javascript" src="{{url_for('static', filename='js/snake.js')}}" ></script>
-<div class="container">
+<div class="container hide" id="Directo">
     <h2>Estamos en Directo!!!!</h2>
-    <iframe
-        src="https://player.twitch.tv/?channel=asociacionvideojuegosuam&parent=videojuegosuam.com"
-        frameborder="0"
-        allowfullscreen="true"
-        scrolling="no" id="twitch-embed">
-    </iframe>
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+    <div id="twitch-embedded"></div>
+    <script type="text/javascript">
+    var options = {
+        width: 1200,
+        height: 700,
+        channel: "asociaciondevideojuegosuam",  
+    };
+    var player = new Twitch.Player("twitch-embedded", options);
+
+    player.addEventListener(Twitch.Player.READY, init)
+
+    function init() {
+      player.addEventListener(Twitch.Player.ONLINE, handleOnline);
+      player.addEventListener(Twitch.Player.OFFLINE, handleOffline);
+      player.removeEventListener(Twitch.Player.READY, init);
+    }
+
+    function handleOnline() {
+      document.getElementById("Directo").classList.remove('hide');
+      player.removeEventListener(Twitch.Player.ONLINE, handleOnline);
+      player.addEventListener(Twitch.Player.OFFLINE, handleOffline);
+      player.setMuted(false);
+    }
+
+    function handleOffline() {
+      document.getElementById("Directo").classList.add('hide');
+      player.removeEventListener(Twitch.Player.OFFLINE, handleOffline);
+      player.addEventListener(Twitch.Player.ONLINE, handleOnline);
+      player.setMuted(true);
+    }
+</script>
 </div>
 <div class="container"> 
-    
     <h2>¿Quienes Somos?</h2>
     <div class="article-and-image">
         <p>
