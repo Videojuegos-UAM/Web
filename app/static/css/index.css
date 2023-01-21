@@ -154,3 +154,5 @@
     transform: translateX(-50%);
     width: 60%;
 }
+
+.hide { display:none; }
