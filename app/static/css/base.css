@@ -237,6 +237,16 @@ header {
     line-height: 1.5;
   }
 
+  #centered{
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
  /*Images*/
 
  .normal-img{
@@ -334,6 +344,17 @@ header {
     border-radius: 0.5em;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   }
+
+  /*canvas*/
+canvas{
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+}
 
  
 

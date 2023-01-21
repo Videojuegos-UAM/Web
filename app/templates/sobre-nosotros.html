@@ -5,6 +5,7 @@
 {%endblock%}
 
 {%block content%}
+<script type="text/javascript" src="{{url_for('static', filename='js/pong.js')}}" ></script>
     <div class="container"> 
         <h2>Sobre Nosotros</h2>
         <p>La Asociación de Videojuegos de la Universidad Autónoma de Madrid es una asociación sin ánimo de lucro que nace en el año 2017 con el objetivo de promover la cultura de los videojuegos en la Universidad Autónoma de Madrid. Para ello, organiza eventos, torneos, charlas, etc. para que los estudiantes de la UAM puedan disfrutar de su pasión por los videojuegos.</p>
@@ -137,7 +138,9 @@
     </div>
 
     <div class="container">
-        
+        <h2>Pong Game</h2>
+        <canvas id="pong" width="700" height="700"></canvas>
+        <p id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
     </div>
 {%endblock%}
     
