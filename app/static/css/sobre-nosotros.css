@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: visible;
+    margin: 1em;
+    padding: 1em;
+    width: 35em;
+}
+
+.card-text{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+}

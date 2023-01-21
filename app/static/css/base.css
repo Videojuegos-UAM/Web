@@ -12,6 +12,7 @@
     --main-button-color: rgb(72, 155, 76);
     --main-button-color-hover: rgb(50,100,50);
     --main-button-text-color: rgb(0, 0, 0);
+    --text-secondary-color: rgb(90, 90, 90);
 }
 
 /*Global*/
@@ -211,6 +212,18 @@ header {
     font-family: var(--main-text-font);
     font-size: 2.5em;
     font-style: italic;
+  }
+
+  h3{
+    margin: 0;
+    padding: 0;
+    color: var(--text-secondary-color);
+    text-align: left;
+    font-family: var(--main-text-font);
+    font-size: 2em;
+    font-weight: 400;
+    text-emphasis: bold;
+    text-decoration: underline;
   }
 
   p {
