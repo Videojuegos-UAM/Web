@@ -155,8 +155,15 @@ function drawSnake()
 {
     for(var i = 0; i < snake.length; i++)
     {
-        var c = snake[i];
-        paint_cell(c.x, c.y,"black");
+        if (i==0)
+        {
+            paint_cell(snake[i].x, snake[i].y,"green");
+        }
+        else
+        {
+            var c = snake[i];
+            paint_cell(c.x, c.y,"black");
+        }
     }
 }
 
@@ -184,7 +191,7 @@ function startScreen()
     ctx.fillStyle = "black";
     ctx.font = "60px Arial";
     ctx.fillText("Snake", (w/2)-100, h/2);
-    ctx.fillText("Press space to start", (w/2)-250, (h/2)+100);
+    ctx.fillText("Press w,a,s,d to start", (w/2)-275, (h/2)+100);
     /*Print score*/
     ctx.fillStyle = "black";
     ctx.font = "12px Arial";
@@ -198,7 +205,7 @@ function refresh()
 {
     if (started == false) {
         startScreen();
-        if (keydown == 32) {
+        if (keydown == "87" || keydown == "65" || keydown == "83" || keydown == "68") {
             started=true;
             //Lets initialize the game
             init();
