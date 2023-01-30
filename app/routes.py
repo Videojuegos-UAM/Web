@@ -21,3 +21,7 @@ def enrique():
 @app.route('/sobre-nosotros')
 def about():
     return render_template('sobre-nosotros.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')

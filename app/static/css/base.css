@@ -247,6 +247,53 @@ header {
     width: 60%;
 }
 
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+}
+
+.card{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  margin: 1em;
+  padding: 1em;
+  width: 35em;
+}
+
+.bigCard{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  margin: 1em;
+  padding: 1em;
+  width: 50em;
+}
+
+.smallCard{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  margin: 1em;
+  padding: 1em;
+  width: 50em;
+}
+
  /*Images*/
 
  .normal-img{
@@ -356,5 +403,9 @@ canvas{
   width: 60%;
 }
 
- 
+.game{
+  padding: 1em;
+  width: 75em;
+  height: 75em;
+}
 
