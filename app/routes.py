@@ -17,3 +17,11 @@ def calendar():
 @app.route('/Enriqueasteregg')
 def enrique():
     return render_template('enrique.html')
+
+@app.route('/sobre-nosotros')
+def about():
+    return render_template('sobre-nosotros.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')

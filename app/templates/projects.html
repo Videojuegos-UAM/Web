@@ -1,0 +1,46 @@
+{%extends "base.html" %} 
+
+{%block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+
+{%endblock%}
+
+{%block content%}
+<script type="text/javascript" src="{{url_for('static', filename='js/brick-breaker.js')}}" ></script>
+<div class="container"> 
+    <h2>¿Quienes Somos?</h2>
+    <div class="article-and-image">
+        <p>
+            Somos una asociación de estudiantes de la Universidad Autónoma de Madrid, que tiene como objetivo principal la difusión de los videojuegos y la cultura gamer. 
+            Nuestra asociación se fundó en el año 1975, y desde entonces hemos ido creciendo y evolucionando hasta convertirnos en lo que somos hoy en día. 
+            Nuestra asociación está formada por un equipo de trabajo que se encarga de organizar eventos, torneos, charlas, etc. 
+            Además, contamos con un equipo de profesionales que se encarga de la producción de contenido para nuestras redes sociales, como por ejemplo, nuestro canal de YouTube. 
+            Si quieres saber más sobre nosotros, no dudes en visitar nuestra página de "Sobre Nosotros".
+            Texto de prueba para ver como queda el texto en la página principal.
+        </p>
+        <img src={{ url_for('static', filename='img/Logo.png' ) }} alt="Logo Videojuegos UAM" class="normal-img">
+    </div>
+    <button class="button" onclick>
+        <p><b>Apuntate al club</b></p>
+    </button>
+
+    <div class="container">
+        <h2>Proyectos</h2>
+        <div class="row">
+                <div class="bigCard">
+                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
+                        <h2 class="card-text">Equipo de Desarrollo</h2>
+                        <button class="button" onclick>
+                            <p><b>Ver más</b></p>
+                        </button>
+                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
+                </div>
+        </div>
+</div>
+
+<div class="container">
+    <h2>Brick Breaker Game</h2>
+    <canvas id="brick-breaker" class="game" width="700" height="700"></canvas>
+    <p id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
+</div>
+{%endblock%}

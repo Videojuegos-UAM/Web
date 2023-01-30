@@ -12,6 +12,7 @@
     --main-button-color: rgb(72, 155, 76);
     --main-button-color-hover: rgb(50,100,50);
     --main-button-text-color: rgb(0, 0, 0);
+    --text-secondary-color: rgb(90, 90, 90);
 }
 
 /*Global*/
@@ -213,6 +214,18 @@ header {
     font-style: italic;
   }
 
+  h3{
+    margin: 0;
+    padding: 0;
+    color: var(--text-secondary-color);
+    text-align: left;
+    font-family: var(--main-text-font);
+    font-size: 2em;
+    font-weight: 400;
+    text-emphasis: bold;
+    text-decoration: underline;
+  }
+
   p {
     margin: 0;
     padding: 0;
@@ -223,6 +236,63 @@ header {
     font-weight: 400;
     line-height: 1.5;
   }
+
+  #centered{
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+}
+
+.card{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  margin: 1em;
+  padding: 1em;
+  width: 35em;
+}
+
+.bigCard{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  margin: 1em;
+  padding: 1em;
+  width: 50em;
+}
+
+.smallCard{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  margin: 1em;
+  padding: 1em;
+  width: 50em;
+}
 
  /*Images*/
 
@@ -322,5 +392,20 @@ header {
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   }
 
- 
+  /*canvas*/
+canvas{
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+}
+
+.game{
+  padding: 1em;
+  width: 75em;
+  height: 75em;
+}
 
