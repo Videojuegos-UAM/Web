@@ -2,12 +2,16 @@
 # -*- coding: utf-8 -*-
 
 from app import app
+from app import database
 from flask import render_template, request, url_for, redirect, session, make_response
+
 
 
 @app.route('/')
 @app.route('/index')
 def base():
+    for doc in database.getAllProjects():
+        print(doc)
     return render_template('index.html')
 
 @app.route('/calendar')
