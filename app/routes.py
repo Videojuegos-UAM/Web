@@ -24,8 +24,17 @@ def enrique():
 
 @app.route('/sobre-nosotros')
 def about():
+    #¿get miembros de la base de datos?
+    #miembros = database.getMiembros()
     return render_template('sobre-nosotros.html')
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    projects = database.getAllProjects() #A la larga puede no ser viable si hay muchos proyectos
+                                         #Sustituir por database.getNumberOfProjects(num)
+    return render_template('projects.html', projects=projects)
+
+@app.route('/projects/<name>')
+def project(name):
+    project = database.getProjectbyName(name)
+    return render_template('project.html', project=project) #Aun no existe project.html
