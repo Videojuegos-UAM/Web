@@ -306,6 +306,17 @@ header {
     margin-right: auto;
   }
 
+  .circular-img{
+    width: 30em;
+    height: 30em;
+    margin: 1em;
+    padding: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
   .small-img{
     width: 15em;
     height: 15em;
