@@ -16,4 +16,10 @@ def getProjectbyName(name):
     db = mongo_client.UAMADV
     return db['Proyectos'].find({'titulo': name})
 
-#TODO: Funciones par obtener miembros por tipo quiza¿?
+
+def getMiembros():
+    db = mongo_client.UAMADV
+    junta = db['Personas_relevantes'].find({'grupo': 'Junta Directiva'})
+    destacados = db['Personas_relevantes'].find({'grupo': 'Destacados'})
+    fundadores = db['Personas_relevantes'].find({'grupo': 'Fundadores'})
+    return junta, destacados, fundadores

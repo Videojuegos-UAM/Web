@@ -24,9 +24,8 @@ def enrique():
 
 @app.route('/sobre-nosotros')
 def about():
-    #¿get miembros de la base de datos?
-    #miembros = database.getMiembros()
-    return render_template('sobre-nosotros.html')
+    junta, destacados, fundadores = database.getMiembros()
+    return render_template('sobre-nosotros.html', junta=junta, destacados=destacados, fundadores=fundadores)
 
 @app.route('/projects')
 def projects():
