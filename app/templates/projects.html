@@ -38,6 +38,16 @@
         </div>
 </div>
 
+<div>
+    {% for project in projects %}
+    <h1>{{ project.titulo }}</h1>
+    <p>{{ project.descripcion_corta }}</p>
+    <p>{{ project.descripcion_larga }}</p>
+    <a href={{ url_for('project', name=project.titulo) }}>test link</a>
+    {% endfor %}
+    Esto iría arriba pero para probar aquí está xD
+</div>
+
 <div class="container">
     <h2>Brick Breaker Game</h2>
     <canvas id="brick-breaker" class="game" width="700" height="700"></canvas>
