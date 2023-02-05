@@ -18,6 +18,10 @@ def base():
 def calendar():
     return render_template('calendar.html')
 
+@app.route('/apuntate')
+def apuntate():
+    return render_template('apuntate.html')
+
 @app.route('/Enriqueasteregg')
 def enrique():
     return render_template('enrique.html')

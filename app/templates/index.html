@@ -57,7 +57,7 @@
         </p>
         <img src={{ url_for('static', filename='img/Main.jpeg' ) }} alt="Logo Videojuegos UAM" class="normal-img" id="main-img">
     </div>
-    <button class="button" onclick>
+    <button class="button"  onclick="window.location.href='{{ url_for('apuntate') }}'">
         <p><b>Apuntate al club</b></p>
     </button>
 </div>
@@ -75,7 +75,7 @@
         style="border-width:0" width="400" height="500" frameborder="0" scrolling="no">
     </iframe>
 </div>
-<div class="next-tournament" >
+<div class="next-tournament" hidden>
     <h2>Próximo Torneo</h2>
     <img src={{ url_for('static', filename='img/Logo.png' ) }} alt="Logo Videojuegos UAM" class="small-img">
     <p>Nombre del torneo</p>
@@ -84,7 +84,7 @@
     <button class="button" onclick>
         <p><b>Apuntate al torneo</b></p>
 </div>
-<div class="next-tournament-form" >
+<div class="next-tournament-form" hidden>
     <h2>Próximo Torneo</h2>
     <form>
         <div>
@@ -100,7 +100,7 @@
     <button class="button" onclick>
         <p><b>Elije juego</b></p>
 </div>
-<div class="resultados-torneo">
+<div class="resultados-torneo" hidden>
     <div class="chart-wrap horizontal"> <!-- quitar el estilo "horizontal" para visualizar verticalmente -->
         <h2>Resultados Torneo</h2>
        
