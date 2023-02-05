@@ -6,7 +6,6 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     {%block head%}
     {%endblock%}
 </head>
@@ -15,7 +14,7 @@
     <script>
         $SCRIPT_ROOT = {{ request.script_root | tojson }};
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="{{url_for('static', filename='js/Enriqueasteregg.js')}}" ></script>
     <style>
        body {background-image: url({{ url_for('static', filename='img/Background.png' ) }});}
