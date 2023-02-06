@@ -80,7 +80,7 @@ def getAllMembers():
         }
     }, {
         '$match': {
-            'datos.grupo': 'Pagina Web'
+            'datos.grupo': 'Web'
         }
     }, {
         '$project': {
