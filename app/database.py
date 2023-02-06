@@ -17,9 +17,10 @@ def getProjectbyName(name):
     return db['Proyectos'].find({'titulo': name})
 
 
-def getMiembros():
+def getAllMembers():
     db = mongo_client.UAMADV
-    junta = db['Personas_relevantes'].find({'grupo': 'Junta Directiva'})
-    destacados = db['Personas_relevantes'].find({'grupo': 'Destacados'}) #ESTABLECER NOMBRES EXACTOS DE LOS GRUPOS
-    fundadores = db['Personas_relevantes'].find({'grupo': 'Fundadores'})
-    return junta, destacados, fundadores
+    junta = db['Personas_relevantes'].find({"datos.grupo" : "Junta Directiva"})
+    destacados = db['Personas_relevantes'].find({"datos.grupo" : "Miembros Destacados"})
+    fundadores = db['Personas_relevantes'].find({'datos.grupo': 'Fundadores'})
+    web = db['Personas_relevantes'].find({'datos.grupo': 'Pagina Web'})
+    return junta, destacados, fundadores, web

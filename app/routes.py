@@ -10,8 +10,6 @@ from flask import render_template, request, url_for, redirect, session, make_res
 @app.route('/')
 @app.route('/index')
 def base():
-    for doc in database.getAllProjects():
-        print(doc)
     return render_template('index.html')
 
 @app.route('/calendar')
@@ -28,8 +26,8 @@ def enrique():
 
 @app.route('/sobre-nosotros')
 def about():
-    junta, destacados, fundadores = database.getMiembros()
-    return render_template('sobre-nosotros.html', junta=junta, destacados=destacados, fundadores=fundadores)
+    junta, destacados, fundadores, web = database.getAllMembers()
+    return render_template('sobre-nosotros.html', junta=junta, destacados=destacados, fundadores=fundadores, web=web)
 
 @app.route('/projects')
 def projects():
