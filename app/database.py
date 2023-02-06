@@ -19,8 +19,76 @@ def getProjectbyName(name):
 
 def getAllMembers():
     db = mongo_client.UAMADV
-    junta = db['Personas_relevantes'].find({"datos.grupo" : "Junta Directiva"})
-    destacados = db['Personas_relevantes'].find({"datos.grupo" : "Miembros Destacados"})
-    fundadores = db['Personas_relevantes'].find({'datos.grupo': 'Fundadores'})
-    web = db['Personas_relevantes'].find({'datos.grupo': 'Pagina Web'})
+    junta = db['Personas_relevantes'].aggregate([
+    {
+        '$unwind': {
+            'path': '$datos'
+        }
+    }, {
+        '$match': {
+            'datos.grupo': 'Junta Directiva'
+        }
+    }, {
+        '$project': {
+            '_id' : 0,
+            'nombre': 1, 
+            'datos': 1, 
+            'url': '$url-foto'
+        }
+    }
+])
+    destacados = db['Personas_relevantes'].aggregate([
+    {
+        '$unwind': {
+            'path': '$datos'
+        }
+    }, {
+        '$match': {
+            'datos.grupo': 'Miembros Destacados'
+        }
+    }, {
+        '$project': {
+            '_id' : 0,
+            'nombre': 1, 
+            'datos': 1, 
+            'url': '$url-foto'
+        }
+    }
+])
+    fundadores = db['Personas_relevantes'].aggregate([
+    {
+        '$unwind': {
+            'path': '$datos'
+        }
+    }, {
+        '$match': {
+            'datos.grupo': 'Fundadores'
+        }
+    }, {
+        '$project': {
+            '_id' : 0,
+            'nombre': 1, 
+            'datos': 1, 
+            'url': '$url-foto'
+        }
+    }
+])
+    web = db['Personas_relevantes'].aggregate([
+    {
+        '$unwind': {
+            'path': '$datos'
+        }
+    }, {
+        '$match': {
+            'datos.grupo': 'Pagina Web'
+        }
+    }, {
+        '$project': {
+            '_id': 0,
+            'nombre': 1, 
+            'datos': 1, 
+            'url': '$url-foto'
+        }
+    }
+])
     return junta, destacados, fundadores, web
