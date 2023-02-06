@@ -251,7 +251,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: self-start;
   flex-direction: row;
   overflow: visible;
   margin: 0;

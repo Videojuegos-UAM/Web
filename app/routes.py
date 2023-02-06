@@ -27,8 +27,6 @@ def enrique():
 @app.route('/sobre-nosotros')
 def about():
     junta, destacados, fundadores, web = database.getAllMembers()
-    for j in junta:
-        print(j)
     return render_template('sobre-nosotros.html', junta=junta, destacados=destacados, fundadores=fundadores, web=web)
 
 @app.route('/projects')

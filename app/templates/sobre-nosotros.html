@@ -24,30 +24,14 @@
     <div class="container">
         <h2>Junta Directiva</h2>
         <div class="row">
+                {% for j in junta %}
                 <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.jpg') }}" alt="Manupa" class="circular-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Presidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
+                    <img src="{{ url_for('static', filename='img/personas/' + j.url) }}" alt="Manupa" class="normal-img">
+                        <h2 class="card-text">{{j.nombre}}</h2>
+                        <h3 class="card-text">{{j.datos.posicion}}</h3>
+                        <p  class="card-text">{{j.datos.descripcion}}</p>
                 </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Vicepresidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Secretario</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Tesorero</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
+                {% endfor %}
         </div>
     </div>
 
@@ -56,90 +40,42 @@
     <div class="container">
         <h2>Miembros Destacados</h2>
         <div class="row">
+                {% for m in destacados %}
                 <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Presidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
+                    <img src="{{ url_for('static', filename='img/personas/' + m.url) }}" alt="Manupa" class="normal-img">
+                        <h2 class="card-text">{{m.nombre}}</h2>
+                        <h3 class="card-text">{{m.datos.posicion}}</h3>
+                        <p  class="card-text">{{m.datos.descripcion}}</p>
                 </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Vicepresidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Secretario</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Tesorero</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
+                {% endfor %}
         </div>
     </div>
 
     <div class="container">
         <h2>Fundadores</h2>
         <div class="row">
+                {% for f in fundadores %}
                 <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Presidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
+                    <img src="{{ url_for('static', filename='img/personas/' + f.url) }}" alt="Manupa" class="normal-img">
+                        <h2 class="card-text">{{f.nombre}}</h2>
+                        <h3 class="card-text">{{f.datos.posicion}}</h3>
+                        <p  class="card-text">{{f.datos.descripcion}}</p>
                 </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Vicepresidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Secretario</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Tesorero</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
+                {% endfor %}
         </div>
     </div>
 
     <div class="container">
         <h2>Pagina Creada por</h2>
         <div class="row">
+                {% for p in web %}
                 <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Presidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
+                    <img src="{{ url_for('static', filename='img/personas/' + p.url) }}" alt="Manupa" class="normal-img">
+                        <h2 class="card-text">{{p.nombre}}</h2>
+                        <h3 class="card-text">{{p.datos.posicion}}</h3>
+                        <p  class="card-text">{{p.datos.descripcion}}</p>
                 </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Vicepresidente</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Secretario</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/Manupa.png') }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">Manuel Pablo "Manupa" González</h2>
-                        <h3 class="card-text">Tesorero</h3>
-                        <p  class="card-text">Texto de ejemplo para rellenar el espacio</p>
-                </div>
+                {% endfor %}
         </div>
 
     </div>
