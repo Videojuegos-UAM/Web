@@ -1,13 +1,8 @@
-Bueno, esto es el esqueleto de la web para la asociación de videojuegos UAM. Espero que os guste y que os sirva de ayuda. Si tenéis alguna duda, podéis contactar con Manuel o conmigo (Enrique).
+Asociación de Videojuegos UAM
+Bienvenido a la página web de la Asociación de Videojuegos UAM. Somos un grupo de estudiantes apasionados por los videojuegos y estamos dedicados a crear una comunidad en la Universidad Autónoma de Madrid donde los jugadores puedan conectarse y disfrutar de sus juegos favoritos juntos.
 
-(Por cierto, protip para windows, en una consola de powershell:
+Nuestra página web es el punto de partida para todas las actividades de la asociación, incluyendo torneos, eventos y discusiones en línea. Aquí puedes encontrar información sobre los próximos eventos, cómo unirte a la asociación y cómo participar en las actividades.
 
-    > Set-ExecutionPolicy Unrestricted -Scope Process 
-    > python3 -m venv venv
-    > .\venv\Scripts\activate
-    > pip install Flask
-    > python -m app
-    
-    En orden, permitir ejecución de scripts, crear el entorno virtual, activarlo, instalar flask y ejecutar la app.
-    Listo uwu.
-)
+Además, estamos abiertos a sugerencias de cambio para mejorar la página web y hacerla más accesible y útil para todos los miembros de la comunidad. Si tienes ideas o sugerencias sobre cómo podemos mejorar, por favor, no dudes en enviarlas en un correo electrónico a la dirección de correo electrónico de la asociación.
+
+Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esperamos verte pronto en uno de nuestros eventos!
