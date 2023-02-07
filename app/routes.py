@@ -38,4 +38,7 @@ def projects():
 @app.route('/projects/<name>')
 def project(name):
     project = database.getProjectbyName(name)
+    for p in project:
+        project = p
+
     return render_template('project.html', project=project) #Aun no existe project.html

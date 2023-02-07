@@ -1,0 +1,24 @@
+{%extends "base.html" %} 
+
+{%block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+
+{%endblock%}
+
+{%block content%}
+<script type="text/javascript" src="{{url_for('static', filename='js/brick-breaker.js')}}" ></script>
+<div class="container">
+    <h2>{{project.titulo}}</h2>
+    <div class="article-and-image">
+    <p>{{project.descripcion_larga|safe}}</p>
+    <img src="{{ url_for('static', filename='img/projects/' + project.url) }}" alt="Manupa" class="normal-img">
+</div>
+<div class="row" id="images">
+    {% for l in project.lista %}
+        <img src="{{ url_for('static', filename='img/projects/' + l.url) }}" alt="Manupa" class="small-img">
+    {% endfor %}
+</div>
+<a href="{{ url_for('projects') }}" class="button"><img src="{{ url_for('static', filename='img/Flecha.png') }}" alt="Back" class="button-img"></a>
+
+</div>
+{%endblock%}

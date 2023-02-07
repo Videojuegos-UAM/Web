@@ -6,7 +6,20 @@ mongo_client = MongoClient('mongodb+srv://admin:adminmanupa@uamadv.nrfpkf2.mongo
 
 def getAllProjects():
     db = mongo_client.UAMADV
-    return db['Proyectos'].find()
+    return db['Proyectos'].aggregate([
+        {
+            '$project': {
+                '_id': 0,
+                'titulo': 1,
+                'descripcion_corta': 1,
+                'descripcion_larga': 1,
+                'url': '$url-foto',
+                'lista': 1
+            }
+        }
+    ])
+
+                
 
 def getNumberOfProjects(num):
     db = mongo_client.UAMADV
@@ -14,7 +27,24 @@ def getNumberOfProjects(num):
 
 def getProjectbyName(name):
     db = mongo_client.UAMADV
-    return db['Proyectos'].find({'titulo': name})
+    return db['Proyectos'].aggregate([
+        {
+            '$project': {
+                '_id': 0,
+                'titulo': 1,
+                'descripcion_corta': 1,
+                'descripcion_larga': 1,
+                'url': '$url-foto',
+                'lista': 1
+            }
+        },
+        {
+        '$match': {
+            'titulo': name
+        }
+        }
+    ])
+
 
 
 def getAllMembers():

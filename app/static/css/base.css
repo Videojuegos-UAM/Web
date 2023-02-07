@@ -318,8 +318,8 @@ header {
   }
 
   .small-img{
-    width: 15em;
-    height: 15em;
+    width: 20em;
+    height: 20em;
     margin: 0;
     padding: 0;
     display: block;
@@ -362,6 +362,18 @@ header {
 
   .button:hover {
     background-color: var(--main-button-color-hover);
+  }
+
+  .button-img{
+    border: none;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    width: 5em;
+    height: 5em;
+
   }
 
   /*Forms*/

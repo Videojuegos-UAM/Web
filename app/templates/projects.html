@@ -28,23 +28,15 @@
         <h2>Proyectos</h2>
         <div class="row">
                 {% for project in projects %}
-                <div class="card">
-                    <img src="{{ url_for('static', filename='img/personas/' + "project.url") }}" alt="Manupa" class="normal-img">
-                        <h2 class="card-text">{{project.titulo}}</h2>
-                        <p  class="card-text">{{project.descripcion_corta}}</p>
-                </div>
+                <a href="{{ url_for('project', name=project.titulo) }}">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/projects/' + project.url) }}" alt="Manupa" class="normal-img">
+                            <h2 class="card-text">{{project.titulo}}</h2>
+                            <p  class="card-text">{{project.descripcion_corta}}</p>
+                    </div>
+                </a>
                 {% endfor %}
         </div>
-</div>
-
-<div>
-    {% for project in projects %}
-    <h1>{{ project.titulo }}</h1>
-    <p>{{  project.descripcion_corta }}</p>
-    <p>{{ project.descripcion_larga|safe}}</p>
-    <a href={{ url_for('project', name=project.titulo) }}>test link</a>
-    {% endfor %}
-    Esto iría arriba pero para probar aquí está xD
 </div>
 
 <div class="container">
