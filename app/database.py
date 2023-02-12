@@ -1,6 +1,7 @@
+import os
 from pymongo import MongoClient
 
-mongo_client = MongoClient('mongodb+srv://admin:adminmanupa@uamadv.nrfpkf2.mongodb.net/UAMADV?authMechanism=DEFAULT')
+mongo_client = MongoClient(os.getenv('URL'))
 
 #VERSION PRELIMINAR POR ENRIQUE ORTEGA
 
