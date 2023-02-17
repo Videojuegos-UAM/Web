@@ -1,7 +1,12 @@
 import os
 from pymongo import MongoClient
+from decouple import config
 
-mongo_client = MongoClient(os.getenv('URL'))
+
+if os.getenv('URL') is None:
+    mongo_client = MongoClient(config('URL'))
+else:
+    mongo_client = MongoClient(os.getenv('URL'))
 
 #VERSION PRELIMINAR POR ENRIQUE ORTEGA
 

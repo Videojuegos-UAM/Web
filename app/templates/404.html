@@ -1,0 +1,11 @@
+{%extends "base.html" %} 
+
+{%block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/404.css') }}">
+
+{%endblock%}
+
+{% block content %}
+<h2 class="section-title"> ERROR 404: Princesa no encontrada</h2>
+<img src={{url_for('static', filename='img/404-image.gif' )}} alt="404" class="image-404">
+{% endblock %}
