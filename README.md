@@ -15,6 +15,9 @@ Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esper
 - Añadidos icono y titulo a la pagina
 - Soporte para database en desarrollo
 
+- ### Version 1.3.1
+- - Arreglar dependencias para production
+
 ## Version 1.2
 - Solucionado error de seguridad en la base de datos
 
