@@ -1,0 +1,35 @@
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 800px;
+    width: 950px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 800px;
+    width: 950px;
+}
+
+
+.indicaciones {
+    display: flex;
+    padding: 1em;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    overflow: visible;
+    background-color: var(--article-bg-color);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+
+.contiene{
+
+    height: 50px;
+    width: 800px;
+    left: 940px;
+    top: -790px;
+    position: relative;
+}

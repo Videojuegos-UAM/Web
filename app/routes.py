@@ -43,6 +43,11 @@ def project(name):
 
     return render_template('project.html', project=project) #Aun no existe project.html
 
+
+@app.route('/ubicacion')
+def ubicacion():
+    return render_template('ubicacion.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html')
