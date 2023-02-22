@@ -12,6 +12,9 @@ Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esper
 ## Version 1.4
 - Add-on añadido para ubicación en Google Maps
 
+- ### Version 1.4.1
+- - Arreglar problema con el add-on de Google Maps (tamaños de pantalla)
+
 ## Version 1.3
 - Añadida nueva secion al archivo README.md 
 - Añadidos mensajes de error 500 y 404

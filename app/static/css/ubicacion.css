@@ -1,15 +1,15 @@
 .mapouter {
     position: relative;
     text-align: right;
-    height: 800px;
-    width: 950px;
+    height: 50em;
+    width: 55em;
 }
 
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
-    height: 800px;
-    width: 950px;
+    height: 50em;
+    width: 55em;
 }
 
 
@@ -27,9 +27,9 @@
 
 .contiene{
 
-    height: 50px;
-    width: 800px;
-    left: 940px;
-    top: -790px;
+    height: 2.5em;
+    width: 60em;
+    left: 60em;
+    top: -45em;
     position: relative;
 }
