@@ -9,8 +9,11 @@ Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esper
 
 # Changelog
 
+## Version 1.4
+- Add-on añadido para ubicación en Google Maps
+
 ## Version 1.3
-- Added a new section to the README.md file
+- Añadida nueva secion al archivo README.md 
 - Añadidos mensajes de error 500 y 404
 - Añadidos icono y titulo a la pagina
 - Soporte para database en desarrollo
