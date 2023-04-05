@@ -181,7 +181,13 @@
 
 [class*="snake-game"] {
     visibility: hidden;
+    display: none;
 }
+
+[id*="snake-container"] {
+    display: none;
+}
+
 /* For desktop: */
 @media only screen and (min-width: 768px) {
 
@@ -204,4 +210,9 @@
     .snake-game{
         visibility: visible;
     }
+
+    #snake-container{
+        display: flex;
+    }
+
 }

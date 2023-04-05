@@ -170,14 +170,15 @@ header {
     height: 100%;
     margin: 1em;
   }
+  
   article{
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    overflow: visible;
-    height: 100%;
+    overflow: hidden;
+    height: 10%;
   }
 
   .container{
@@ -448,7 +449,11 @@ canvas{
   font-size: 80%;
 }
 
-
+#content {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -458,6 +463,12 @@ canvas{
   .contact{
     font-size: x-large;
   }
+
+  #content {
+    display: flex;
+    flex-direction: row;
+  }
+
 
   #header-title
 {
