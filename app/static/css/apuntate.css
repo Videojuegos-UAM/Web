@@ -1,6 +1,23 @@
 .formulario{
     background-color: #f2f2f2;
-    margin: 20px;
+    margin: 0px;
     border-radius: 10px;
     box-shadow: 0 0 10px #000000;
 }
+
+
+
+[class*="formulario"] {
+    width: 370px;
+    height: 2040px;
+}
+
+@media only screen and (min-width: 768px) {
+    .formulario {
+        height: 1720px;
+        width: 1720px;
+    }
+
+}
+
+

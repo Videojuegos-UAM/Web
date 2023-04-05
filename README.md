@@ -9,6 +9,11 @@ Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esper
 
 # Changelog
 
+## Version 1.5
+
+- Visibilidad para moviles corregida
+- Arreglo de errores
+
 ## Version 1.4
 - Add-on añadido para ubicación en Google Maps
 

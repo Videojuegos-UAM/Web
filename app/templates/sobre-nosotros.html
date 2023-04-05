@@ -7,7 +7,7 @@
 {%block content%}
 <script type="text/javascript" src="{{url_for('static', filename='js/pong.js')}}" ></script>
     <div class="container"> 
-        <h2>Sobre Nosotros</h2>
+        <h2 class="texto-nosotros">Sobre Nosotros</h2>
         <div class="article-and-image">
 
         <p>La Asociación de Videojuegos de la Universidad Autónoma de Madrid es una asociación sin ánimo de lucro  con el objetivo de promover la cultura de los videojuegos en la Universidad Autónoma de Madrid. Para ello, organiza eventos, torneos, charlas, etc. para que los estudiantes de la UAM puedan disfrutar de su pasión por los videojuegos.<br><br>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="container">
-        <h2>Junta Directiva</h2>
+        <h2 class="texto-nosotros">Junta Directiva</h2>
         <div class="row">
                 {% for j in junta %}
                 <div class="card">
@@ -38,7 +38,7 @@
     
 
     <div class="container">
-        <h2>Miembros Destacados</h2>
+        <h2 class="texto-nosotros">Miembros Destacados</h2>
         <div class="row">
                 {% for m in destacados %}
                 <div class="card">
@@ -52,7 +52,7 @@
     </div>
 
     <div class="container">
-        <h2>Fundadores</h2>
+        <h2 class="texto-nosotros">Fundadores</h2>
         <div class="row">
                 {% for f in fundadores %}
                 <div class="card">
@@ -66,7 +66,7 @@
     </div>
 
     <div class="container">
-        <h2>Pagina Creada por</h2>
+        <h2 class="texto-nosotros">Pagina Creada por</h2>
         <div class="row">
                 {% for p in web %}
                 <div class="card">
@@ -81,9 +81,9 @@
     </div>
 
     <div class="container">
-        <h2>Pong Game</h2>
+        <h2 class="pong-game">Pong Game</h2>
         <canvas id="pong" class="game" width="700" height="700"></canvas>
-        <p id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
+        <p class="pong-game" id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
     </div>
 {%endblock%}
     

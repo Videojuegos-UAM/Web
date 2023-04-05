@@ -51,28 +51,28 @@
             Nuestra asociación está formada por un equipo de trabajo que se encarga de organizar eventos, torneos, charlas, etc. y de mantener el club en funcionamiento.
             Además tambien tenemos un grupo de desarrollo de videojuegos, que se encarga de crear videojuegos para la comunidad gamer. 
             Si quieres saber más sobre nosotros, no dudes en visitar nuestra página de "Sobre Nosotros".
+            <img src={{ url_for('static', filename='img/Main.jpeg' ) }} alt="Logo Videojuegos UAM" class="normal-img" id="main-img">
             <br></br>
             Siempre estamos abiertos a nuevas ideas y colaboraciones, así que si quieres colaborar con nosotros, no dudes en ponerte en contacto con nosotros.<br>
             Por último, si quieres apuntarte a nuestro club, no dudes en hacerlo, ya que siempre estamos abiertos a nuevos miembros.
         </p>
-        <img src={{ url_for('static', filename='img/Main.jpeg' ) }} alt="Logo Videojuegos UAM" class="normal-img" id="main-img">
     </div>
     <button class="button"  onclick="window.location.href='{{ url_for('apuntate') }}'">
         <p><b>Apuntate al club</b></p>
     </button>
 </div>
-<div class="container">
-    <h2>Snake Game</h2>
+<div class="container" id="snake-container">
+    <h2 class="snake-game">Snake Game</h2>
     <canvas id="snake" class="game" width="700" height="700"></canvas>
-    <p id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
+    <p id="centered" class="snake-game">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
 </div>
 {%endblock%}
 
 {% block aside %}
 <div class="calendar-static">
-    <iframe
+    <iframe class="calendar-frame"
         src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23489b4c&ctz=Europe%2FMadrid&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showNav=1&showDate=1&showTitle=0&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23009688"
-        style="border-width:0" width="400" height="500" frameborder="0" scrolling="no">
+        >
     </iframe>
 </div>
 <div class="next-tournament" hidden>
