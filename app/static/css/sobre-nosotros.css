@@ -9,3 +9,57 @@
     padding: 0%;
 }
 
+[class*="article-and-image"] {
+    font-size: x-small;
+}
+
+[class*="texto-nosotros"] {
+    font-size: x-large;
+}
+
+[class*="button"] {
+    font-size: small;
+}
+
+[class*="card-text"] {
+    font-size: large;
+}
+
+[class*="game"] {
+    visibility: hidden;
+}
+
+[class*="pong-game"] {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .article-and-image{ 
+        font-size: medium;
+    }
+
+    .texto-nosotros{
+        font-size:5ch;
+        
+    }
+    .card-text{
+        font-size: 5ch;
+    }
+
+
+    .button{
+    font-size: small;
+        
+    }
+
+    .game{
+    visibility:visible;
+
+    }
+    .pong-game{
+        visibility:visible;
+    
+        }
+}
+
+

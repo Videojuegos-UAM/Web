@@ -1,6 +1,6 @@
 .mapouter {
     position: relative;
-    text-align: right;
+    text-align:end;
     height: 50em;
     width: 55em;
 }
@@ -25,11 +25,93 @@
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   }
 
-.contiene{
+  
+[class*="mapouter"] {
 
-    height: 2.5em;
-    width: 60em;
-    left: 60em;
-    top: -45em;
-    position: relative;
+    width: 280px;
+    height: 280px; 
+
 }
+
+[class*="gmap_canvas"] {
+
+    width: 280px;
+    height: 280px; 
+
+}
+
+#gmap_canvas
+{
+
+    width: 280px;
+    height: 280px; 
+
+}
+
+
+[class*="contiene"] {
+    top: 140em;
+    left: 5px;
+    position: absolute;
+    width: 97%; 
+
+}
+
+[class*="donde"] {
+    font-size: x-large;
+
+}
+
+[class*="indicaciones"] {
+    font-size: x-small;
+    
+}
+
+[class*="donde"] {
+    font-size: x-large;
+}
+
+@media only screen and (min-width: 768px) {
+      
+  [class*="mapouter"] {
+
+    height: 50em;
+    width: 55em;
+
+}
+
+[class*="gmap_canvas"] {
+    height: 50em;
+    width: 55em;
+
+}
+
+#gmap_canvas
+{
+
+    height: 50em;
+    width: 55em;
+
+}
+
+
+    .contiene{
+
+        height: 2.5em;
+        width: 60em;
+        left: 60em;
+        top: -45em;
+        position: relative;
+    }
+
+    .donde{
+        font-size:5ch;
+        
+    }
+
+    .indicaciones{ 
+        font-size: medium;
+    }
+
+}
+

@@ -8,7 +8,7 @@
 {%block content%}
 <script type="text/javascript" src="{{url_for('static', filename='js/brick-breaker.js')}}" ></script>
 <div class="container"> 
-    <h2>¿Quienes Somos?</h2>
+    <h2 class="text-prjct">¿Quienes Somos?</h2>
     <div class="article-and-image">
         <p>
             Somos un grupo de estudiantes de la Universidad Autónoma de Madrid que nos gusta mucho los videojuegos. 
@@ -18,14 +18,14 @@
             Durante los últimos años hemos llevado a cabo varios proyectos, como esta página web y los demás que puedes ver en esta página.
             Si quieres unirte a nosotros, puedes apuntarte al club en el botón de abajo.
         </p>
-        <img src={{ url_for('static', filename='img/Logo.png' ) }} alt="Logo Videojuegos UAM" class="normal-img">
+    <img src={{ url_for('static', filename='img/Logo.png' ) }} alt="Logo Videojuegos UAM" class="normal-img">
     </div>
     <button class="button" onclick="window.location.href='{{ url_for('apuntate') }}'">
         <p><b>Apuntate al club</b></p>
     </button>
 
     <div class="container">
-        <h2>Proyectos</h2>
+        <h2 class="text-prjct">Proyectos</h2>
         <div class="row">
                 {% for project in projects %}
                 <a href="{{ url_for('project', name=project.titulo) }}">
@@ -40,8 +40,8 @@
 </div>
 
 <div class="container">
-    <h2>Brick Breaker Game</h2>
+    <h2 class="game-brick">Brick Breaker Game</h2>
     <canvas id="brick-breaker" class="game" width="700" height="700"></canvas>
-    <p id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
+    <p class="game-brick" id="centered">Juego hecho por Github Copilot (Con ayuda de Manupa)</p>
 </div>
 {%endblock%}

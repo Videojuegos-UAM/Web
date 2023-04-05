@@ -4,10 +4,10 @@
     margin: 0;
     padding: 0;
     border: 0;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
-#main-img{
+#main-img {
     width: auto;
 }
 
@@ -16,17 +16,26 @@
 .calendar-static {
     position: relative;
     float: right;
-    top : 0;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    top: 0;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
+
+.calendar-frame {
+    width: 400px;
+    height: 500px;
+    border-width: 0px;
+    border: 0px;
+}
+
 .next-tournament {
     position: relative;
     float: right;
-    top : 0;
+    top: 0;
     text-align: center;
     padding: 1em;
     margin: 1em;
 }
+
 .next-tournament p {
     font-size: 1.5em;
     font-weight: 600;
@@ -38,15 +47,16 @@
 .next-tournament-form {
     position: relative;
     float: right;
-    top : 0;
+    top: 0;
     text-align: center;
     padding: 1em;
     margin: 1em;
 }
-.resultados-torneo{
+
+.resultados-torneo {
     position: relative;
     float: right;
-    top : 0;
+    top: 0;
     text-align: center;
     padding: 1em;
     margin: 1em;
@@ -55,89 +65,143 @@
 /*Chart*/
 
 .chart-wrap {
-    --chart-width:38vh;
+    --chart-width: 38vh;
     --grid-color: rgb(72, 155, 76);
     --bar-color: rgb(72, 155, 76);
-    --bar-thickness:40px;
+    --bar-thickness: 40px;
     --bar-rounded: 3px;
-    --bar-spacing:10px;
+    --bar-spacing: 10px;
 
-    font-family:sans-serif;
-    width:var(--chart-width);
+    font-family: sans-serif;
+    width: var(--chart-width);
 }
 
-.chart-wrap .title{
-    font-weight:bold;
-    padding:1.8em 0;
-    text-align:center;
-    white-space:nowrap;
+.chart-wrap .title {
+    font-weight: bold;
+    padding: 1.8em 0;
+    text-align: center;
+    white-space: nowrap;
 }
 
 /* cuando definimos el gráfico en horizontal, lo giramos 90 grados */
-.chart-wrap.horizontal .grid{
-    transform:rotate(-90deg);
-    width:37vh;
+.chart-wrap.horizontal .grid {
+    transform: rotate(-90deg);
+    width: 37vh;
 }
 
-.chart-wrap.horizontal .bar::after{
+.chart-wrap.horizontal .bar::after {
     /* giramos las letras para horizontal*/
     transform: rotate(45deg);
-    padding-top:0px;
+    padding-top: 0px;
     display: block;
 }
 
-.chart-wrap .grid{
-    margin-left:50px;
-    position:relative;
-    padding:5px 0 5px 0;
-    height:100%;
-    width:100%;
-    border-left:2px solid var(--grid-color);
+.chart-wrap .grid {
+    margin-left: 50px;
+    position: relative;
+    padding: 5px 0 5px 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid var(--grid-color);
 }
 
 /* posicionamos el % del gráfico*/
-.chart-wrap .grid::before{
-    font-size:0.8em;
-    font-weight:bold;
-    content:'0%';
-    position:absolute;
-    left:-0.5em;
-    top:-1.5em;
+.chart-wrap .grid::before {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '0%';
+    position: absolute;
+    left: -0.5em;
+    top: -1.5em;
 }
-.chart-wrap .grid::after{
-    font-size:0.8em;
-    font-weight:bold;
-    content:'100%';
-    position:absolute;
-    right:-1.5em;
-    top:-1.5em;
+
+.chart-wrap .grid::after {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '100%';
+    position: absolute;
+    right: -1.5em;
+    top: -1.5em;
 }
 
 /* giramos las valores de 0% y 100% para horizontal */
-.chart-wrap.horizontal .grid::before, .chart-wrap.horizontal .grid::after {
+.chart-wrap.horizontal .grid::before,
+.chart-wrap.horizontal .grid::after {
     transform: rotate(90deg);
 }
 
 .chart-wrap .bar {
     width: var(--bar-value);
-    height:var(--bar-thickness);
-    margin:var(--bar-spacing) 0;
-    background-color:var(--bar-color);
-    border-radius:0 var(--bar-rounded) var(--bar-rounded) 0;
+    height: var(--bar-thickness);
+    margin: var(--bar-spacing) 0;
+    background-color: var(--bar-color);
+    border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
 }
 
-.chart-wrap .bar:hover{
-    opacity:0.7;
+.chart-wrap .bar:hover {
+    opacity: 0.7;
 }
 
-.chart-wrap .bar::after{
-    content:attr(data-name);
-    margin-left:100%;
-    padding:10px;
-    display:inline-block;
-    white-space:nowrap;
+.chart-wrap .bar::after {
+    content: attr(data-name);
+    margin-left: 100%;
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 
 
-.hide { display:none; }
+.hide {
+    display: none;
+}
+
+
+
+
+/* For mobile phones: */
+[class*="calendar-frame"] {
+    width: 196px;
+    height: 230px;
+    position: relative;
+}
+
+[class*="article-and-image"] {
+    font-size: smaller;
+}
+[class*="normal-img"] {
+    width: 196px;
+    height: 100px;
+    
+}
+
+[class*="game"] {
+    visibility: hidden;
+}
+
+[class*="snake-game"] {
+    visibility: hidden;
+}
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+
+    .calendar-frame {
+        width: 440px;
+        height: 500px;
+    }
+    
+    .article-and-image {
+        font-size: medium;
+    }
+
+    .normal-img {
+        width: 700px;
+        height: 700px;
+    }
+    .game{
+        visibility: visible;
+    }
+    .snake-game{
+        visibility: visible;
+    }
+}

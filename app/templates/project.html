@@ -8,7 +8,7 @@
 {%block content%}
 <script type="text/javascript" src="{{url_for('static', filename='js/brick-breaker.js')}}" ></script>
 <div class="container">
-    <h2>{{project.titulo}}</h2>
+    <h2 class="text-prjct">{{project.titulo}}</h2>
     <div class="article-and-image">
     <p>{{project.descripcion_larga|safe}}</p>
     <img src="{{ url_for('static', filename='img/projects/' + project.url) }}" alt="Manupa" class="normal-img">

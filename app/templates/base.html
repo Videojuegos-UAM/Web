@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='img/Logo.png' ) }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/Logo.png' ) }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {%block head%}
     {%endblock%}
 </head>
@@ -22,7 +24,7 @@
     <style>
        body {background-image: url({{ url_for('static', filename='img/Background.png' ) }});}
     </style>
-        <header>
+        <header class="encabezado-pagina">
             <a id="header-link" href={{ url_for('base') }}>
                 <img id="header-logo" src={{ url_for('static', filename='img/Logo.png' ) }} alt="No Logo?">
                 <h1 id="header-title">
@@ -52,7 +54,7 @@
         </section>
         
         <footer>
-            <div id="footer-social">
+            <div class="contact" id="footer-social">
                 <a href="https://www.youtube.com/@videojuegosuam1975">
                     <img id="youtube" src={{ url_for('static', filename='img/Youtube.png' ) }} alt="No Youtube?">
                 </a>
@@ -71,7 +73,7 @@
                 <a href="mailto: asociacionvideojuegosuam@gmail.com">
                     <img id="email" src={{ url_for('static', filename='img/Email.png' ) }} alt="No Email?">
                 </a>
-                <h2>Contáctanos:</h2>
+                <h2 class="contact" >Contáctanos:</h2>
             </div>
         </footer>
 </body>

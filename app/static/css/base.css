@@ -115,7 +115,7 @@ header {
   #menu-button {
     width: 4em;
     height: 4em;
-    padding-left: 50%;
+    padding-left: 30%;
     display: block;
 
   }
@@ -432,3 +432,35 @@ canvas{
   height: 60em;
 }
 
+
+[class*="encabezado-pagina"] {
+  font-size:medium;
+}
+
+[class*="contact"] {
+  font-size:medium;
+  size: 5px;
+}
+
+
+#header-title
+{
+  font-size: 80%;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .encabezado-pagina {
+    font-size: medium;
+  }
+  .contact{
+    font-size: x-large;
+  }
+
+  #header-title
+{
+  font-size: 200%;
+}
+}
