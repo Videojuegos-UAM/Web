@@ -17,6 +17,9 @@ Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esper
 - ### Version 1.5.1
 - - Añadido Alfonso como Miembro Destacado
 
+- ### Version 1.5.2
+- - Modificada foto de Alfonso
+
 ## Version 1.4
 - Add-on añadido para ubicación en Google Maps
 
