@@ -13,6 +13,9 @@ Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esper
 - Añadido easter-egg (easter-cookie)
 - Desarrollado instalacion de produccion en vez de usar una debug (Por fin!!!!!)
 
+- ### Version 1.5.1
+- - Arreglar los requirements
+
 ## Version 1.5
 
 - Visibilidad para moviles corregida
