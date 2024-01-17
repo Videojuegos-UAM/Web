@@ -338,6 +338,29 @@ header {
     margin-right: auto;
   }
 
+  .cookie-image{
+    width: 3em;
+    height: 3em;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #cookie-image:hover{
+    width: 3.5em;
+    height: 3.5em;
+  }
+  #amador-image{
+    width: 9em;
+    height: 3em;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /*Buttons*/
 
   .button {
@@ -376,6 +399,11 @@ header {
     height: 5em;
 
   }
+  .button-invisible {
+
+    background: transparent;
+    border: none;
+}
 
   /*Forms*/
 

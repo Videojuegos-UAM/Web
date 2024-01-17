@@ -48,6 +48,19 @@ def project(name):
 def ubicacion():
     return render_template('ubicacion.html')
 
+@app.route('/cookie')
+def cookie():
+    cookie = "taken"
+    # Create a response object
+    response = make_response("Cookie is set!")
+
+    # Set a cookie on the response object
+    response.set_cookie('cookie', 'taken', max_age=60*5) #5 minutes
+
+    # Return the response
+    return response
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html')
