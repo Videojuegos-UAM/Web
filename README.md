@@ -9,6 +9,10 @@ Gracias por visitar la página web de la Asociación de Videojuegos UAM. ¡Esper
 
 # Changelog
 
+## Version 1.6
+- Añadido easter-egg (easter-cookie)
+- Desarrollado instalacion de produccion en vez de usar una debug (Por fin!!!!!)
+
 ## Version 1.5
 
 - Visibilidad para moviles corregida
